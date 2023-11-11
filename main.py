@@ -48,7 +48,7 @@ async def upload_and_process(file: UploadFile = File(...), uploaded_by: str = Fo
             shutil.copyfileobj(file.file, f)
 
         try:
-            insert_data_audio(unique_filename, uploaded_by, file_path)  # Assuming this function exists
+            insert_data_audio(uploaded_by, file_path)  # Assuming this function exists
             pass
         except Exception as e:
             print("Some error occurred while saving it in the database", e)
