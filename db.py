@@ -3,11 +3,11 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 DRIVER_NAME = "SQL Server"
-SERVER_NAME = "192.168.1.50"
-DB_USER = "SA"
-DB_PASSWORD = "Utkarsh@988"
-DB_SERVER = "192.168.1.50"
-DB_DATABASE = "focaldatabase"
+SERVER_NAME = "<your server name>"
+DB_USER = "<username>"
+DB_PASSWORD = "<password>"
+DB_SERVER = "<server>"
+DB_DATABASE = "<databaseName>"
 DB_PORT = 1433
 
 params = urllib.parse.quote_plus(
