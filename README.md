@@ -27,14 +27,14 @@ Now run the server by using:
 All testing can be done on fastapi swagger UI by going to the URL https://localhost:8000/docs  
 
 ### Video upload For Audio Extraction API
-![/uploadforaudio](screenshots\audio_upload.jpg?raw=true)
+![/uploadforaudio](screenshots/audio_upload.jpg?raw=true)
 
 ### Audio download API
-![/getaudio/{file_identifier}](screenshots\audio_download.jpg?raw=true)
+![/getaudio/{file_identifier}](screenshots/audio_download.jpg?raw=true)
 
 ### Video upload for Watermarking API
-![/upload-video](screenshots\video_upload.jpg?raw=true)
+![/upload-video](screenshots/video_upload.jpg?raw=true)
 
 ### Watermarked video download API
-![/get-processed-video/{uid}](screenshots\video_watermark_download.jpg?raw=true)
+![/get-processed-video/{uid}](screenshots/video_watermark_download.jpg?raw=true)
 
