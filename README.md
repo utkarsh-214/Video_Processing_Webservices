@@ -20,6 +20,10 @@ install all the python libraries in your virtual enviourment by using:
 ```pip install -r requirements.txt```
 
 ### Step 5
+Set Up your MSSQL server with valid credentials  
+![database_setup](screenshots/db.jpg?raw=true)
+
+### Step 6
 Now run the server by using:  
 ```uvicorn main:app```
 
