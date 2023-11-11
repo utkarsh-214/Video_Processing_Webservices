@@ -8,10 +8,10 @@ Base = declarative_base()
 
 class AudioExtractionData(Base):
     __tablename__ = "upload_data_audio"
-    uid = Column(String(50), primary_key=True, default=str(uuid.uuid4()), unique=True)
     uploaded_by = Column(String(500))
-    filename = Column(String(500))
+    filepath = Column(String(500),primary_key=True, unique=True)
     uploadTime = Column(DateTime, default=func.current_timestamp())
+
 
 class UploadData(Base):
     __tablename__ = "upload_data"

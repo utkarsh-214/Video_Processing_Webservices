@@ -5,8 +5,8 @@ from models import Base
 
 
 # Database operations functions
-def add_data_audio(db: Session, uid: str, uploaded_by, filename: str):
-    new_upload = AudioExtractionData(uid=uid, uploaded_by=uploaded_by, filename=filename)
+def add_data_audio(db: Session, uploaded_by, filepath: str):
+    new_upload = AudioExtractionData(uploaded_by=uploaded_by, filepath=filepath)
     db.add(new_upload)
     db.commit()
     db.refresh(new_upload)
@@ -15,9 +15,9 @@ def add_data_audio(db: Session, uid: str, uploaded_by, filename: str):
 Base.metadata.create_all(bind=engine)
 
 # methods to be used for api and other files
-def insert_data_audio(uid, uploaded_by, filename):
+def insert_data_audio(uploaded_by, filepath):
     with DbSession() as db:
-        new_upload = add_data_audio(db=db, uid=uid, uploaded_by=uploaded_by, filename=filename)
+        new_upload = add_data_audio(db=db, uploaded_by=uploaded_by, filepath=filepath)
         print(
             f"Data added successfully with UID: {new_upload.uid}, uploaded_by: {new_upload.uploaded_by} Filename: {new_upload.filename}"
         )
