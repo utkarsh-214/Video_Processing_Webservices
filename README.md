@@ -46,15 +46,15 @@ All testing can be done on fastapi swagger UI by going to the URL https://localh
 ## Docker Setup
 
 ### Step 1
-first build the docker image using dockerfile and make a container for the app
+first build the docker image using dockerfile and make a container for the app  
 ```docker build -t <your_image_name>:tag```
 
 ### Step 2
-Now we have a docker image for our app, so setup the mssql server on docker using docker compose file, run it in detach mode with -d.
+Now we have a docker image for our app, so setup the mssql server on docker using docker compose file, run it in detach mode with -d.  
 ```docker-compose -f mssql.yaml -d```
 
 ### Step 3
-with mssql server ready, run the docker image for the app in a container using:
+with mssql server ready, run the docker image for the app in a container using:  
 ```docker run -p <hostport>:<dockerport>  <your_image_name>:tag -d```
 
 now all the functions will run on the host port which you have mapped.
